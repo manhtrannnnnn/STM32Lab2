@@ -1,0 +1,37 @@
+/*
+ * timer.c
+ *
+ *  Created on: Nov 1, 2023
+ *      Author: ASUS TUF
+ */
+
+
+#include "timer.h"
+
+int ENM_counter = 0;
+int LED_counter = 0;
+int ENM_flag = 0;
+int LED_flag = 0;
+
+void setTimer_EN(int duration){
+	ENM_counter = duration;
+	ENM_flag = 0;
+}
+void setTimer_LED(int duration){
+	LED_counter = duration;
+	LED_flag = 0;
+}
+void timerRun(){
+	if(ENM_counter > 0){
+		ENM_counter--;
+		if(ENM_counter <= 0){
+			ENM_flag = 1;
+		}
+	}
+	if(LED_counter > 0){
+		LED_counter--;
+		if(LED_counter <= 0){
+			LED_flag = 1;
+		}
+	}
+}

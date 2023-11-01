@@ -1,0 +1,18 @@
+/*
+ * software_timer.h
+ *
+ *  Created on: Nov 1, 2023
+ *      Author: ASUS TUF
+ */
+
+#ifndef INC_SOFTWARE_TIMER_H_
+#define INC_SOFTWARE_TIMER_H_
+
+extern int EN_flag;
+extern int LED_flag;
+
+void setTimer_EN(int duration);
+void setTimer_LED(int duration);
+void timerRun();
+
+#endif /* INC_SOFTWARE_TIMER_H_ */

@@ -1,0 +1,28 @@
+/*
+ * control.h
+ *
+ *  Created on: Nov 1, 2023
+ *      Author: ASUS TUF
+ */
+
+#ifndef INC_CONTROL_H_
+#define INC_CONTROL_H_
+
+#include "main.h"
+
+extern uint8_t matrix_buffer[8];
+void clear7SEG();
+void display7SEG(int num);
+
+void clearEN();
+//void openEN(int state);
+void displayClock(int hour, int minute);
+void updateClockBuffer();
+void getBuffer(uint8_t buffer);
+void openENM(int index);
+void clearENM();
+void updateClockBuffer();
+
+#endif /* INC_LED_H_ */
+
+
